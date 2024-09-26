@@ -13,14 +13,18 @@ Requirements: A soft drink company recently surveyed 16,500 of its customers and
 using namespace std;
 int main() 
 {
-  const int totalCustomers = 16500;
-  const double percent_Energy_Drinks_buyers = 0.15;
-  const double percent_citrus_preference = 0.58;
+  int total_customers;
+  cout << "Enter the total number of customer's surveyed: ";
+  cin >> total_customers;
 
-  int energyDrinksBuyers = totalCustomers * percent_Energy_Drinks_buyers;
-  cout << "The approximate number of customers in the survey who purchase one or more energy drinks per week: " << energyDrinksBuyers << endl;
-  int citrusPreference = energyDrinksBuyers * percent_citrus_preference;
-  cout << "The approximate number of customers in the survey who prefer citrus-flavored energy drinks: " << citrusPreference << endl;
+  const double percentage_energy_drink_buyers = 0.15;
+  const double percentage_citrus_flavored = 0.58;
+
+  int energy_drink_buyers = total_customers * percentage_energy_drink_buyers;
+  cout << "The approximate number of customers who purchase one or more energy drinks per week: " << energy_drink_buyers << endl;
+
+  int citrus_flavored_energy_drink_buyers = energy_drink_buyers * percentage_citrus_flavored;
+  cout << "The approximate number of customers who prefer citrus-flavored energy drinks: " << citrus_flavored_energy_drink_buyers << endl;
 
 
   return 0;
